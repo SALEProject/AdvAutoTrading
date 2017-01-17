@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="27">
+      <Unit0>
+        <Filename Value="AdvAutoTrading.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="AdvAutoTrading"/>
+        <EditorIndex Value="10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="28" Y="17"/>
+        <UsageCount Value="95"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="dashboard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frm_Main"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Dashboard"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="662"/>
+        <CursorPos X="1" Y="664"/>
+        <UsageCount Value="95"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="sqliteconnection.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SQLITEConnection"/>
+        <UsageCount Value="95"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="position.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frm_Lansare"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Position"/>
+        <UsageCount Value="95"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="u_dm_main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dm_Main"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="u_dm_main"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1156"/>
+        <CursorPos X="1" Y="1188"/>
+        <UsageCount Value="95"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="u_algorithm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="u_algorithm"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1038"/>
+        <CursorPos X="1" Y="1058"/>
+        <UsageCount Value="95"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="u_finance_request.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="u_finance_request"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="431"/>
+        <CursorPos X="25" Y="462"/>
+        <UsageCount Value="95"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="u_frm_history.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frm_History"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_frm_history"/>
+        <EditorIndex Value="9"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="181"/>
+        <CursorPos X="33" Y="188"/>
+        <UsageCount Value="95"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="u_frm_debug.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frm_Debug"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_frm_debug"/>
+        <UsageCount Value="95"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="taprint.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TAPrint"/>
+        <UsageCount Value="95"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="u_logger.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="u_Logger"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="12"/>
+        <CursorPos X="1" Y="41"/>
+        <UsageCount Value="95"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="u_frm_about.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frm_about"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_frm_about"/>
+        <UsageCount Value="95"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\classes\classesh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1595"/>
+        <CursorPos X="21" Y="1611"/>
+        <UsageCount Value="44"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\classes\classes.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="141"/>
+        <CursorPos X="5" Y="145"/>
+        <UsageCount Value="44"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\fcl-web\src\base\fphttpclient.pp"/>
+        <UnitName Value="fphttpclient"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="331"/>
+        <CursorPos X="3" Y="328"/>
+        <UsageCount Value="46"/>
+        <Loaded Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\fcl-net\src\ssockets.pp"/>
+        <UnitName Value="ssockets"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="137"/>
+        <CursorPos X="3" Y="148"/>
+        <UsageCount Value="46"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\win\wininc\func.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="112"/>
+        <CursorPos X="10" Y="129"/>
+        <UsageCount Value="17"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="TWSThread.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TWSThread"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="219"/>
+        <CursorPos X="64" Y="237"/>
+        <UsageCount Value="38"/>
+        <Loaded Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="..\BRM\Implementation\BRMServiceStresser\brmstressthread.pas"/>
+        <UnitName Value="brmstressthread"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="99"/>
+        <CursorPos X="4" Y="109"/>
+        <UsageCount Value="16"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="TWSCom.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TWSCom"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="673"/>
+        <CursorPos X="3" Y="704"/>
+        <UsageCount Value="38"/>
+        <Loaded Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\threadh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="132"/>
+        <CursorPos X="30" Y="150"/>
+        <UsageCount Value="11"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\winunits-base\src\comobj.pp"/>
+        <UnitName Value="comobj"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1744"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\winunits-base\src\activex.pp"/>
+        <UnitName Value="ActiveX"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="3900"/>
+        <CursorPos X="13" Y="3917"/>
+        <UsageCount Value="10"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="TWSLib_1_0_TLB.pas"/>
+        <UnitName Value="TWSLib_1_0_TLB"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2155"/>
+        <CursorPos X="19" Y="2157"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32object.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="368"/>
+        <CursorPos X="1" Y="378"/>
+        <UsageCount Value="10"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="C:\TWS API\source\ActiveXControl\ComPropAccessor.h"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="101"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="C++"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="C:\TWS API\source\ActiveXControl\Tws_i.h"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="9691"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="C++"/>
+      </Unit26>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="171" Column="1" TopLine="144"/>
+      </Position1>
+      <Position2>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="172" Column="1" TopLine="145"/>
+      </Position2>
+      <Position3>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="176" Column="1" TopLine="149"/>
+      </Position3>
+      <Position4>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="177" Column="1" TopLine="150"/>
+      </Position4>
+      <Position5>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="178" Column="1" TopLine="151"/>
+      </Position5>
+      <Position6>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="179" Column="1" TopLine="152"/>
+      </Position6>
+      <Position7>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="180" Column="8" TopLine="165"/>
+      </Position7>
+      <Position8>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="223" Column="1" TopLine="206"/>
+      </Position8>
+      <Position9>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="225" Column="1" TopLine="206"/>
+      </Position9>
+      <Position10>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="226" Column="1" TopLine="206"/>
+      </Position10>
+      <Position11>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="228" Column="1" TopLine="206"/>
+      </Position11>
+      <Position12>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="230" Column="1" TopLine="206"/>
+      </Position12>
+      <Position13>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="231" Column="1" TopLine="206"/>
+      </Position13>
+      <Position14>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="223" Column="1" TopLine="206"/>
+      </Position14>
+      <Position15>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="225" Column="1" TopLine="206"/>
+      </Position15>
+      <Position16>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="226" Column="1" TopLine="206"/>
+      </Position16>
+      <Position17>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="228" Column="1" TopLine="206"/>
+      </Position17>
+      <Position18>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="230" Column="1" TopLine="206"/>
+      </Position18>
+      <Position19>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="223" Column="1" TopLine="206"/>
+      </Position19>
+      <Position20>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="228" Column="42" TopLine="206"/>
+      </Position20>
+      <Position21>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="293" Column="4" TopLine="276"/>
+      </Position21>
+      <Position22>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="455" Column="10" TopLine="312"/>
+      </Position22>
+      <Position23>
+        <Filename Value="TWSCom.pas"/>
+        <Caret Line="199" Column="40" TopLine="178"/>
+      </Position23>
+      <Position24>
+        <Filename Value="u_finance_request.pas"/>
+        <Caret Line="237" Column="1" TopLine="213"/>
+      </Position24>
+      <Position25>
+        <Filename Value="TWSCom.pas"/>
+        <Caret Line="195" Column="1" TopLine="178"/>
+      </Position25>
+      <Position26>
+        <Filename Value="TWSCom.pas"/>
+        <Caret Line="130" Column="29" TopLine="385"/>
+      </Position26>
+      <Position27>
+        <Filename Value="TWSCom.pas"/>
+        <Caret Line="153" Column="1" TopLine="128"/>
+      </Position27>
+      <Position28>
+        <Filename Value="TWSThread.pas"/>
+        <Caret Line="212" Column="1" TopLine="193"/>
+      </Position28>
+      <Position29>
+        <Filename Value="TWSThread.pas"/>
+        <Caret Line="71" Column="4" TopLine="54"/>
+      </Position29>
+      <Position30>
+        <Filename Value="dashboard.pas"/>
+        <Caret Line="11" Column="74" TopLine="1"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="9">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="TWSCom.pas"/>
+        <Line Value="300"/>
+      </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="TWSCom.pas"/>
+        <Line Value="313"/>
+      </Item2>
+      <Item3>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="TWSCom.pas"/>
+        <Line Value="322"/>
+      </Item3>
+      <Item4>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="TWSCom.pas"/>
+        <Line Value="340"/>
+      </Item4>
+      <Item5>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="TWSCom.pas"/>
+        <Line Value="355"/>
+      </Item5>
+      <Item6>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="TWSCom.pas"/>
+        <Line Value="373"/>
+      </Item6>
+      <Item7>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="TWSCom.pas"/>
+        <Line Value="446"/>
+      </Item7>
+      <Item8>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="TWSCom.pas"/>
+        <Line Value="175"/>
+      </Item8>
+      <Item9>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="TWSLib_1_0_TLB.pas"/>
+        <Line Value="2164"/>
+      </Item9>
+    </BreakPoints>
+  </Debugging>
+  <EditorMacros Count="0"/>
+</CONFIG>

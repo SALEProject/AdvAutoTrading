@@ -1,0 +1,33 @@
+unit SQLITEConnection;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, sqlite3conn, sqlite3dyn, sqlite3, sqlite3backup, Sqlite3DS, sqldb;
+
+type TDBConnection = class
+                         private
+                               SQLConnection: TSQLite3Connection;
+                               Transaction: TSQLTransaction;
+                               procedure createConnection;
+                         public
+                               procedure connect;
+                     end;
+
+
+implementation
+
+procedure TDBConnection.createConnection;
+begin
+
+end;
+
+procedure TDBConnection.connect;
+begin
+
+end;
+
+end.
+

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <AlwaysBuild Value="True"/>
+        <UseDesignTimePackages Value="True"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="AdvAutoTrading"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="6">
+      <Item1>
+        <PackageName Value="Printer4Lazarus"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="TAChartLazarusPkg"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="RunTimeTypeInfoControls"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="MemDSLaz"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="FCL"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="LCL"/>
+      </Item6>
+    </RequiredPackages>
+    <Units Count="13">
+      <Unit0>
+        <Filename Value="AdvAutoTrading.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="AdvAutoTrading"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="dashboard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frm_Main"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Dashboard"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="sqliteconnection.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SQLITEConnection"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="position.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frm_Lansare"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Position"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="u_dm_main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dm_Main"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="u_dm_main"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="u_algorithm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="u_algorithm"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="u_finance_request.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="u_finance_request"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="u_frm_history.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frm_History"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_frm_history"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="u_frm_debug.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frm_Debug"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_frm_debug"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="taprint.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TAPrint"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="u_logger.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="u_Logger"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="u_frm_about.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frm_about"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="u_frm_about"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="u_MarketPosition.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="u_MarketPosition"/>
+      </Unit12>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="AdvAutoTrading"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="8">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="EHTTPClient"/>
+      </Item4>
+      <Item5>
+        <Name Value="EVariantTypeCastError"/>
+      </Item5>
+      <Item6>
+        <Name Value="EDatabaseError"/>
+      </Item6>
+      <Item7>
+        <Name Value="EConvertError"/>
+      </Item7>
+      <Item8>
+        <Name Value="EVariantError"/>
+      </Item8>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

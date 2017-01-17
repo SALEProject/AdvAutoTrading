@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AdvAutoTrading>
+  <TWS>
+    <Host>127.0.0.1</Host>
+    <Port>7496</Port>
+    <ClientID>1</ClientID>
+  </TWS>
+</AdvAutoTrading>

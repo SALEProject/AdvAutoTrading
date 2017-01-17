@@ -1,0 +1,695 @@
+object dm_Main: Tdm_Main
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Height = 561
+  HorizontalOffset = 809
+  VerticalOffset = 157
+  Width = 421
+  object ds_Positions: TDatasource
+    DataSet = dset_Positions
+    left = 48
+    top = 144
+  end
+  object dset_Positions: TBufDataset
+    FieldDefs = <    
+      item
+        Name = 'NRPOS'
+        Attributes = [faRequired]
+        DataType = ftAutoInc
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'SYMBOL'
+        DataType = ftString
+        Precision = 0
+        Size = 20
+      end    
+      item
+        Name = 'ACTIVE'
+        DataType = ftBoolean
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'OPENED'
+        DataType = ftBoolean
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'VOLUME'
+        DataType = ftLargeint
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'LAST_BUY_PRICE'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'LAST_SELL_PRICE'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'HISTORY_INDEX'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'OPEN_PERCENT'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'STOP_PERCENT'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'TAKE_PERCENT'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'PROT_MARGIN'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'PROT_CORECT'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'PROTECTION_ZONE'
+        DataType = ftBoolean
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'COMPANY_NAME'
+        DataType = ftString
+        Precision = 0
+        Size = 100
+      end    
+      item
+        Name = 'MARKET'
+        DataType = ftString
+        Precision = 0
+        Size = 100
+      end    
+      item
+        Name = 'TOTAL_PL'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PROT_START_PRICE'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'LAST_MARKET_PRICE'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'MARKET_TIME'
+        DataType = ftDateTime
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'RE_OPEN'
+        DataType = ftBoolean
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'DIRECTION'
+        DataType = ftString
+        Precision = 0
+        Size = 100
+      end    
+      item
+        Name = 'SHORT_OPEN_PERCENT'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'SHORT_TAKE_PERCENT'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'SHORT_STOP_PERCENT'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'SHORT_PROT_MARGIN'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'SHORT_PROT_CORECT'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_DIRECTION'
+        DataType = ftString
+        Precision = 0
+        Size = 100
+      end    
+      item
+        Name = 'START_PRICE_MIN'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'START_PRICE_MAX'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'TEMP_ID'
+        DataType = ftLargeint
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'SMA_PRICE'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'EMA_PRICE'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'AVERAGE_PRICE'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'NR_AVG'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'NR_REC_PRICES'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'OLDEST_PRICE'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'RE_OPEN_PERCENT'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'SHORT_RE_OPEN_PERCENT'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'TIME_AVERAGE'
+        DataType = ftBoolean
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_1'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_2'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_3'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_4'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_5'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_6'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_7'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_8'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_9'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_10'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_11'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_12'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_13'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_14'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_15'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_16'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_17'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_18'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_19'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_20'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_21'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_22'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_23'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_24'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_25'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_26'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_27'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_28'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_29'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_30'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_31'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PREV_PRICE_32'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'STOP_PRICE'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'USE_EMA'
+        DataType = ftBoolean
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'FORCE_BUY'
+        DataType = ftBoolean
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'CLOSE_NOW_AT_MARKET'
+        DataType = ftBoolean
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'CLOSE_AT_MARKETCLOSING'
+        DataType = ftBoolean
+        Precision = 0
+        Size = 0
+      end>
+    left = 168
+    top = 144
+  end
+  object dset_Symbols: TBufDataset
+    FieldDefs = <>
+    left = 168
+    top = 200
+  end
+  object dset_History: TBufDataset
+    MaxIndexesCount = 100
+    FieldDefs = <    
+      item
+        Name = 'IDX'
+        DataType = ftAutoInc
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'NRPOS'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'ACTION'
+        DataType = ftString
+        Precision = 0
+        Size = 50
+      end    
+      item
+        Name = 'PRICE'
+        DataType = ftFloat
+        Precision = 2
+        Size = 0
+      end    
+      item
+        Name = 'STATE'
+        DataType = ftString
+        Precision = 0
+        Size = 50
+      end    
+      item
+        Name = 'DATETIME'
+        DataType = ftDateTime
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'PROFIT_LOSS'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'SYMBOL'
+        DataType = ftString
+        Precision = 0
+        Size = 50
+      end    
+      item
+        Name = 'STATUS'
+        DataType = ftString
+        Precision = 0
+        Size = 100
+      end    
+      item
+        Name = 'PREV_DIR'
+        DataType = ftString
+        Precision = 0
+        Size = 100
+      end    
+      item
+        Name = 'CURR_DIR'
+        DataType = ftString
+        Precision = 0
+        Size = 100
+      end    
+      item
+        Name = 'TEMP_ID'
+        DataType = ftLargeint
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'SMA_PRICE'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'EMA_PRICE'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'AVERAGE_PRICE'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'INFO'
+        DataType = ftString
+        Precision = 0
+        Size = 250
+      end>
+    left = 168
+    top = 264
+  end
+  object ds_History: TDatasource
+    DataSet = dset_History
+    left = 48
+    top = 264
+  end
+  object dset_Temp_Positions: TBufDataset
+    FieldDefs = <>
+    left = 168
+    top = 48
+  end
+  object ds_Temp_Pos: TDatasource
+    DataSet = dset_Temp_Positions
+    left = 48
+    top = 48
+  end
+  object dset_ClonedPositions: TBufDataset
+    FieldDefs = <>
+    left = 336
+    top = 48
+  end
+  object dset_Prices: TBufDataset
+    MaxIndexesCount = 100
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftAutoInc
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'NRPOS'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'SYMBOL'
+        DataType = ftString
+        Precision = 0
+        Size = 100
+      end    
+      item
+        Name = 'MARKET_TIME'
+        DataType = ftDateTime
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'VALUE'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'SMA_PRICE'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'EMA_PRICE'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'AVERAGE_PRICE'
+        DataType = ftFloat
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'TIMEOUT'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'TEMP_ID'
+        DataType = ftLargeint
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'ACTION'
+        DataType = ftString
+        Precision = 0
+        Size = 100
+      end    
+      item
+        Name = 'INFO'
+        DataType = ftString
+        Precision = 0
+        Size = 512
+      end>
+    left = 168
+    top = 328
+  end
+  object ds_ClonedPrices: TDatasource
+    left = 48
+    top = 432
+  end
+  object ds_ClonedHistory: TDatasource
+    left = 48
+    top = 488
+  end
+end

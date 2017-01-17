@@ -1,0 +1,1736 @@
+object frm_Lansare: Tfrm_Lansare
+  Left = 459
+  Height = 602
+  Top = 191
+  Width = 1000
+  Caption = 'Lansare'
+  ClientHeight = 602
+  ClientWidth = 1000
+  Color = clNavy
+  Font.Color = clWhite
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.2.4.0'
+  object Parametri: TGroupBox
+    Left = 8
+    Height = 348
+    Top = 208
+    Width = 982
+    Caption = 'Parametri'
+    ClientHeight = 330
+    ClientWidth = 978
+    Color = clNavy
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -27
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 4
+    object Label24: TLabel
+      Left = 18
+      Height = 21
+      Hint = 'Acesta este procentul-conditie folosit de pozitie '#13#10'pentru a deschide o tranzactie de cumparare LONG la '#13#10'inceputul lansarii DACA nu s-a cerut "fortare cumparare"'
+      Top = 155
+      Width = 269
+      Alignment = taRightJustify
+      Caption = 'Procent deschidere LONG (lansare):'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object Label2: TLabel
+      Left = 6
+      Height = 21
+      Top = 24
+      Width = 85
+      Caption = 'Nr. Actiuni:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 90
+      Height = 21
+      Top = 307
+      Width = 196
+      Caption = 'Procent STOP LOSS LONG:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object dbEd_Volume: TDBEdit
+      Left = 101
+      Height = 29
+      Top = 20
+      Width = 47
+      DataField = 'VOLUME'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Style = [fsBold]
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 0
+    end
+    object dbEd_OpenPercent: TDBEdit
+      Left = 298
+      Height = 29
+      Hint = 'Acesta este procentul-conditie folosit de pozitie '#13#10'pentru a deschide o tranzactie de cumparare LONG la '#13#10'inceputul lansarii DACA nu s-a cerut "fortare cumparare"'
+      Top = 147
+      Width = 50
+      DataField = 'OPEN_PERCENT'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Style = [fsBold]
+      MaxLength = 0
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object dbEd_StopPercent: TDBEdit
+      Left = 297
+      Height = 23
+      Top = 305
+      Width = 50
+      DataField = 'STOP_PERCENT'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 2
+    end
+    object dbEd_TakePercent: TDBEdit
+      Left = 297
+      Height = 23
+      Top = 277
+      Width = 50
+      DataField = 'TAKE_PERCENT'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 3
+    end
+    object Label5: TLabel
+      Left = 74
+      Height = 21
+      Top = 279
+      Width = 211
+      Caption = 'Procent TAKE PROFIT LONG:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label13: TLabel
+      Left = 6
+      Height = 44
+      Top = 64
+      Width = 146
+      AutoSize = False
+      Caption = 'Fortare Cumparare La Piata:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object dbEd_ProtCorect: TDBEdit
+      Left = 298
+      Height = 29
+      Hint = 'Acesta este parametrul-conditie procentuala de scadere'#13#10'a unei pozitii LONG care va genera inchiderea ei. '#13#10'ATENTIE: pentru ca acest parametru sa fie luat in '#13#10'consideratie trebuie ca pozitia respectiva sa fi ajuns'#13#10'deja la procentul de intrare in profit'
+      Top = 211
+      Width = 50
+      DataField = 'PROT_CORECT'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Style = [fsBold]
+      MaxLength = 0
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+    end
+    object Label7: TLabel
+      Left = 8
+      Height = 21
+      Hint = 'Acesta este parametrul-conditie procentuala de scadere'#13#10'a unei pozitii LONG care va genera inchiderea ei. '#13#10'ATENTIE: pentru ca acest parametru sa fie luat in '#13#10'consideratie trebuie ca pozitia respectiva sa fi ajuns'#13#10'deja la procentul de intrare in profit'
+      Top = 220
+      Width = 277
+      Caption = 'Procent inchidere (CORECTIE) LONG:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object Label6: TLabel
+      Left = 55
+      Height = 21
+      Hint = 'Procentul de intrare pe profit reprezinta pragul '#13#10'de la care pozitia LONG este considerata profitabila si'#13#10'se activeaza conditia de corectie - adica in cazul unei'#13#10'scaderi se va inchide pozitia pentru a se marca '#13#10'un profit minim'
+      Top = 251
+      Width = 232
+      Caption = 'Procent intrare in profit LONG:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object dbEd_ProtMargin: TDBEdit
+      Left = 297
+      Height = 23
+      Hint = 'Procentul de intrare pe profit reprezinta pragul '#13#10'de la care pozitia LONG este considerata profitabila si'#13#10'se activeaza conditia de corectie - adica in cazul unei'#13#10'scaderi se va inchide pozitia pentru a se marca '#13#10'un profit minim'
+      Top = 249
+      Width = 50
+      DataField = 'PROT_MARGIN'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 0
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+    end
+    object Label25: TLabel
+      Left = 411
+      Height = 21
+      Hint = 'Acesta este procentul-conditie folosit de pozitie '#13#10'pentru a deschide o tranzactie de vanzare SHORT la '#13#10'inceputul lansarii DACA nu s-a cerut "fortare cumparare"'
+      Top = 156
+      Width = 277
+      Caption = 'Procent deschidere SHORT (lansare):'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object Label8: TLabel
+      Left = 403
+      Height = 21
+      Hint = 'Acesta este parametrul-conditie procentuala de crestere'#13#10'a unei pozitii SHORT care va genera inchiderea ei. '#13#10'ATENTIE: pentru ca acest parametru sa fie luat in '#13#10'consideratie trebuie ca pozitia respectiva sa fi ajuns'#13#10'deja la procentul de intrare in profit'
+      Top = 220
+      Width = 285
+      Caption = 'Procent inchidere (CORECTIE) SHORT:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label9: TLabel
+      Left = 458
+      Height = 21
+      Hint = 'Procentul de intrare pe profit reprezinta pragul '#13#10'de la care pozitia SHORTeste considerata profitabila si'#13#10'se activeaza conditia de corectie - adica in cazul unei'#13#10'cresteri se va inchide pozitia pentru a se marca '#13#10'un profit minim'
+      Top = 252
+      Width = 230
+      Caption = 'Procent profitabilitate SHORT:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object Label10: TLabel
+      Left = 469
+      Height = 21
+      Top = 280
+      Width = 219
+      Caption = 'Procent TAKE PROFIT SHORT:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label11: TLabel
+      Left = 484
+      Height = 21
+      Top = 308
+      Width = 204
+      Caption = 'Procent STOP LOSS SHORT:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object dbEd_TakePercent1: TDBEdit
+      Left = 693
+      Height = 23
+      Top = 277
+      Width = 50
+      DataField = 'SHORT_TAKE_PERCENT'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 6
+    end
+    object dbEd_StopPercent1: TDBEdit
+      Left = 693
+      Height = 23
+      Top = 305
+      Width = 50
+      DataField = 'SHORT_STOP_PERCENT'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 7
+    end
+    object dbEd_ProtMargin1: TDBEdit
+      Left = 693
+      Height = 23
+      Hint = 'Procentul de intrare pe profit reprezinta pragul '#13#10'de la care pozitia SHORTeste considerata profitabila si'#13#10'se activeaza conditia de corectie - adica in cazul unei'#13#10'cresteri se va inchide pozitia pentru a se marca '#13#10'un profit minim'
+      Top = 249
+      Width = 50
+      DataField = 'SHORT_PROT_MARGIN'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 0
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 8
+    end
+    object Label3: TLabel
+      Left = 354
+      Height = 19
+      Top = 157
+      Width = 16
+      Caption = '%'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label12: TLabel
+      Left = 354
+      Height = 19
+      Top = 221
+      Width = 16
+      Caption = '%'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label16: TLabel
+      Left = 353
+      Height = 19
+      Top = 253
+      Width = 16
+      Caption = '%'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label26: TLabel
+      Left = 353
+      Height = 19
+      Top = 281
+      Width = 16
+      Caption = '%'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label27: TLabel
+      Left = 353
+      Height = 19
+      Top = 309
+      Width = 16
+      Caption = '%'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label28: TLabel
+      Left = 744
+      Height = 19
+      Top = 248
+      Width = 16
+      Caption = '%'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label29: TLabel
+      Left = 744
+      Height = 19
+      Top = 276
+      Width = 16
+      Caption = '%'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label30: TLabel
+      Left = 744
+      Height = 19
+      Top = 306
+      Width = 16
+      Caption = '%'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      OnClick = Label30Click
+    end
+    object dbEd_ShortOpenPercent: TDBEdit
+      Left = 692
+      Height = 29
+      Hint = 'Acesta este procentul-conditie folosit de pozitie '#13#10'pentru a deschide o tranzactie de vanzare SHORT la '#13#10'inceputul lansarii DACA nu s-a cerut "fortare cumparare"'
+      Top = 148
+      Width = 50
+      DataField = 'SHORT_OPEN_PERCENT'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Style = [fsBold]
+      MaxLength = 0
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 9
+    end
+    object dbEd_ProtCorect1: TDBEdit
+      Left = 692
+      Height = 29
+      Hint = 'Acesta este parametrul-conditie procentuala de crestere'#13#10'a unei pozitii SHORT care va genera inchiderea ei. '#13#10'ATENTIE: pentru ca acest parametru sa fie luat in '#13#10'consideratie trebuie ca pozitia respectiva sa fi ajuns'#13#10'deja la procentul de intrare in profit'
+      Top = 213
+      Width = 50
+      DataField = 'SHORT_PROT_CORECT'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Style = [fsBold]
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 10
+    end
+    object Label31: TLabel
+      Left = 744
+      Height = 19
+      Top = 155
+      Width = 16
+      Caption = '%'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label32: TLabel
+      Left = 744
+      Height = 19
+      Top = 220
+      Width = 16
+      Caption = '%'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label33: TLabel
+      Left = 187
+      Height = 18
+      Top = 8
+      Width = 244
+      AutoSize = False
+      Caption = 'Redeschidere dupa STOP/COR:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object DBCheckBox1: TDBCheckBox
+      Left = 432
+      Height = 18
+      Top = 8
+      Width = 16
+      Color = 8404992
+      DataField = 'RE_OPEN'
+      DataSource = dm_Main.ds_Temp_Pos
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 11
+      ValueChecked = 'True'
+      ValueUnchecked = 'False'
+    end
+    object Label34: TLabel
+      Left = 752
+      Height = 16
+      Top = 8
+      Width = 177
+      AutoSize = False
+      Caption = 'Medie mobila:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+      OnClick = Label34Click
+    end
+    object DBComboBox1: TDBComboBox
+      Left = 864
+      Height = 27
+      Top = 4
+      Width = 108
+      AutoSize = False
+      DataField = 'NR_AVG'
+      DataSource = dm_Main.ds_Temp_Pos
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ItemHeight = 19
+      Items.Strings = (
+        '0'
+        '1'
+        '2'
+        '3'
+        '4'
+        '5'
+        '6'
+        '7'
+        '8'
+        '9'
+        '10'
+        '11'
+        '12'
+        '13'
+        '14'
+        '15'
+        '16'
+        '17'
+        '18'
+        '19'
+        '20'
+        '21'
+        '22'
+        '23'
+        '24'
+        '25'
+        '26'
+        '27'
+        '28'
+        '29'
+        '30'
+        '31'
+        '32'
+        '64'
+        '128'
+        '256'
+        '512'
+        '1024'
+        '2048'
+        '4096'
+        '16384'
+        '32768'
+        '65536'
+      )
+      MaxLength = 0
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 12
+    end
+    object Bevel1: TBevel
+      Left = 4
+      Height = 5
+      Top = 132
+      Width = 968
+    end
+    object Label35: TLabel
+      Left = 88
+      Height = 21
+      Hint = 'Acesta este procentul-conditie folosit de pozitie '#13#10'pentru a deschide o tranzactie de cumparare LONG la '#13#10'dupa ce s-a executat o inchidere de tranzactie in '#13#10'fara a se forta redeschiderea. La prima deschidere'#13#10'se foloseste parametrul de "lansare" iar toate deschiderile'#13#10'succesive vor folosi acest paramentru.'
+      Top = 187
+      Width = 199
+      Caption = 'Procent RE-deschid LONG:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object Label36: TLabel
+      Left = 481
+      Height = 21
+      Hint = 'Acesta este procentul-conditie folosit de pozitie '#13#10'pentru a deschide o tranzactie de vanzare SHORT la '#13#10'dupa ce s-a executat o inchidere de tranzactie in '#13#10'fara a se forta redeschiderea. La prima deschidere'#13#10'se foloseste parametrul de "lansare" iar toate deschiderile'#13#10'succesive vor folosi acest paramentru'
+      Top = 188
+      Width = 207
+      Caption = 'Procent RE-deschid SHORT:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object Label37: TLabel
+      Left = 354
+      Height = 19
+      Top = 189
+      Width = 16
+      Caption = '%'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label38: TLabel
+      Left = 744
+      Height = 19
+      Top = 185
+      Width = 16
+      Caption = '%'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object dbEd_Re_OpenPercent: TDBEdit
+      Left = 298
+      Height = 29
+      Hint = 'Acesta este procentul-conditie folosit de pozitie '#13#10'pentru a deschide o tranzactie de cumparare LONG la '#13#10'dupa ce s-a executat o inchidere de tranzactie in '#13#10'fara a se forta redeschiderea. La prima deschidere'#13#10'se foloseste parametrul de "lansare" iar toate deschiderile'#13#10'succesive vor folosi acest paramentru.'
+      Top = 179
+      Width = 50
+      DataField = 'RE_OPEN_PERCENT'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Style = [fsBold]
+      MaxLength = 0
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 13
+    end
+    object dbEd_Short_RE_OpenPercent: TDBEdit
+      Left = 692
+      Height = 29
+      Hint = 'Acesta este procentul-conditie folosit de pozitie '#13#10'pentru a deschide o tranzactie de vanzare SHORT la '#13#10'dupa ce s-a executat o inchidere de tranzactie in '#13#10'fara a se forta redeschiderea. La prima deschidere'#13#10'se foloseste parametrul de "lansare" iar toate deschiderile'#13#10'succesive vor folosi acest paramentru'
+      Top = 181
+      Width = 50
+      DataField = 'SHORT_RE_OPEN_PERCENT'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Style = [fsBold]
+      MaxLength = 0
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 14
+    end
+    object Label39: TLabel
+      Left = 752
+      Height = 16
+      Top = 33
+      Width = 108
+      AutoSize = False
+      Caption = 'Mediere timp:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+      OnClick = Label34Click
+    end
+    object DBCheckBox2: TDBCheckBox
+      Left = 860
+      Height = 18
+      Top = 33
+      Width = 16
+      Color = 8404992
+      DataField = 'TIME_AVERAGE'
+      DataSource = dm_Main.ds_Temp_Pos
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 15
+      ValueChecked = 'True'
+      ValueUnchecked = 'False'
+    end
+    object Label40: TLabel
+      Left = 916
+      Height = 16
+      Hint = 'Algoritmul calculeaza atat EMA cat si SMA pentru '#13#10'numarul respectiv de preturi. Standard se foloseste '#13#10'valoarea SMA (Media Simpla Mobila) pentru calcule'#13#10'in interiorul algoritmului. Prin selectare EMA (Media'#13#10'Exponentiala Mobila) se va folosi aceasta in locul'#13#10'SMA.'
+      Top = 33
+      Width = 108
+      AutoSize = False
+      Caption = 'EMA:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      WordWrap = True
+      OnClick = Label34Click
+    end
+    object DBCheckBox3: TDBCheckBox
+      Left = 960
+      Height = 18
+      Hint = 'Algoritmul calculeaza atat EMA cat si SMA pentru '#13#10'numarul respectiv de preturi. Standard se foloseste '#13#10'valoarea SMA (Media Simpla Mobila) pentru calcule'#13#10'in interiorul algoritmului. Prin selectare EMA (Media'#13#10'Exponentiala Mobila) se va folosi aceasta in locul'#13#10'SMA.'
+      Top = 33
+      Width = 16
+      Color = 8404992
+      DataField = 'USE_EMA'
+      DataSource = dm_Main.ds_Temp_Pos
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 16
+      ValueChecked = 'True'
+      ValueUnchecked = 'False'
+    end
+    object Label41: TLabel
+      Left = 460
+      Height = 21
+      Top = 28
+      Width = 255
+      Caption = 'Fortare INCHIDERE la sfarsit de zi:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object dbck_ForceBuy1: TDBCheckBox
+      Left = 716
+      Height = 18
+      Top = 31
+      Width = 16
+      Color = 8404992
+      DataField = 'CLOSE_AT_MARKETCLOSING'
+      DataSource = dm_Main.ds_Temp_Pos
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 18
+      ValueChecked = 'True'
+      ValueUnchecked = 'False'
+    end
+    object Label42: TLabel
+      Left = 752
+      Height = 40
+      Top = 56
+      Width = 129
+      AutoSize = False
+      Caption = 'Resetare medie pos-operatii:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+      OnClick = Label34Click
+    end
+    object DBCheckBox4: TDBCheckBox
+      Left = 860
+      Height = 18
+      Top = 76
+      Width = 16
+      Color = 8404992
+      DataField = 'RESET_AVERAGE'
+      DataSource = dm_Main.ds_Temp_Pos
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 19
+      ValueChecked = 'True'
+      ValueUnchecked = 'False'
+    end
+    object Label43: TLabel
+      Left = 472
+      Height = 18
+      Hint = 'Activant aceasta optiune fortati ca dupa un TAKE PROFIT pozitia sa se redeschida in acelasi sens'
+      Top = 8
+      Width = 243
+      AutoSize = False
+      Caption = 'Continuare dupa TAKE PROFIT:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      WordWrap = True
+    end
+    object DBCheckBox5: TDBCheckBox
+      Left = 716
+      Height = 18
+      Hint = 'Activant aceasta optiune fortati ca dupa un TAKE PROFIT pozitia sa se redeschida in acelasi sens'
+      Top = 8
+      Width = 16
+      Color = 8404992
+      DataField = 'RE_TAKE'
+      DataSource = dm_Main.ds_Temp_Pos
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 20
+      ValueChecked = 'True'
+      ValueUnchecked = 'False'
+    end
+    object dbck_ForceBuy: TDBCheckBox
+      Left = 79
+      Height = 18
+      Top = 87
+      Width = 16
+      Color = 8404992
+      DataField = 'FORCE_BUY'
+      DataSource = dm_Main.ds_Temp_Pos
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 17
+      ValueChecked = 'True'
+      ValueUnchecked = 'False'
+    end
+    object Label44: TLabel
+      Left = 172
+      Height = 21
+      Top = 28
+      Width = 256
+      Caption = 'Fortare STANDBY dupa CORECTIE:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object dbck_ForceBuy2: TDBCheckBox
+      Left = 432
+      Height = 18
+      Top = 31
+      Width = 16
+      Color = 8404992
+      DataField = 'STAND_BY_AFTER_PROT'
+      DataSource = dm_Main.ds_Temp_Pos
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 21
+      ValueChecked = 'True'
+      ValueUnchecked = 'False'
+    end
+    object dbck_ForceBuy3: TDBCheckBox
+      Left = 432
+      Height = 18
+      Top = 52
+      Width = 16
+      Color = 8404992
+      DataField = 'STANDBY_AFTER_STOP'
+      DataSource = dm_Main.ds_Temp_Pos
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 22
+      ValueChecked = 'True'
+      ValueUnchecked = 'False'
+    end
+    object Label45: TLabel
+      Left = 208
+      Height = 21
+      Top = 48
+      Width = 221
+      Caption = 'Fortare STANDBY dupa STOP:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label47: TLabel
+      Left = 211
+      Height = 20
+      Hint = 'Se inchide pozitia curenta la 30% din corectie atunci cand profitul virtual nu depaseste 20% din CORECTIE'
+      Top = 72
+      Width = 220
+      AutoSize = False
+      Caption = 'Inchidere pe corectie rapida:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      WordWrap = True
+    end
+    object dbck_ForceBuy4: TDBCheckBox
+      Left = 432
+      Height = 18
+      Top = 76
+      Width = 16
+      Color = 8404992
+      DataField = 'EARLY_PROT'
+      DataSource = dm_Main.ds_Temp_Pos
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 23
+      ValueChecked = 'True'
+      ValueUnchecked = 'False'
+    end
+    object Label48: TLabel
+      Left = 892
+      Height = 80
+      Top = 52
+      Width = 78
+      AutoSize = False
+      Caption = 'Observatie: selectarea a mai mult de 32 de valori genereaza folosirea automata a EMA'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -9
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object Label49: TLabel
+      Left = 172
+      Height = 36
+      Top = 92
+      Width = 124
+      AutoSize = False
+      Caption = 'Prag profit VMax (cor rap):'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object Label50: TLabel
+      Left = 372
+      Height = 36
+      Top = 92
+      Width = 124
+      AutoSize = False
+      Caption = 'Prag scadere corectie rapida:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object DBEdit1: TDBEdit
+      Left = 292
+      Height = 27
+      Top = 100
+      Width = 50
+      DataField = 'PRF_PRC_ERL'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 24
+    end
+    object DBEdit2: TDBEdit
+      Left = 492
+      Height = 27
+      Top = 100
+      Width = 50
+      DataField = 'COR_PRC_ERL'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 25
+    end
+    object Label51: TLabel
+      Left = 504
+      Height = 21
+      Top = 56
+      Width = 209
+      Caption = 'Inversare la BOUNCE-BACK:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object dbck_ForceBuy5: TDBCheckBox
+      Left = 716
+      Height = 18
+      Top = 60
+      Width = 16
+      Color = 8404992
+      DataField = 'BOUNCE'
+      DataSource = dm_Main.ds_Temp_Pos
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 26
+      ValueChecked = 'True'
+      ValueUnchecked = 'False'
+    end
+    object Label52: TLabel
+      Left = 784
+      Height = 36
+      Top = 147
+      Width = 124
+      AutoSize = False
+      Caption = 'Intrare in banda de BOUNCE:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+    end
+    object Label53: TLabel
+      Left = 784
+      Height = 36
+      Top = 192
+      Width = 124
+      AutoSize = False
+      Caption = 'Iesire din banda de BOUNCE:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      WordWrap = True
+      OnClick = Label53Click
+    end
+    object DBEdit3: TDBEdit
+      Left = 908
+      Height = 27
+      Top = 152
+      Width = 50
+      DataField = 'MIN_BOUNCE'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Color = clWhite
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 27
+    end
+    object DBEdit4: TDBEdit
+      Left = 908
+      Height = 27
+      Top = 201
+      Width = 50
+      DataField = 'MAX_BOUNCE'
+      DataSource = dm_Main.ds_Temp_Pos
+      CharCase = ecNormal
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 28
+    end
+    object Label54: TLabel
+      Left = 960
+      Height = 19
+      Top = 164
+      Width = 16
+      Caption = '%'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label55: TLabel
+      Left = 960
+      Height = 19
+      Top = 213
+      Width = 16
+      Caption = '%'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Informatii: TGroupBox
+    Left = 396
+    Height = 209
+    Top = 0
+    Width = 220
+    Caption = 'Informatii'
+    ClientHeight = 191
+    ClientWidth = 216
+    Font.Color = clWhite
+    Font.Height = -27
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    OnClick = InformatiiClick
+    object Label18: TLabel
+      Left = 6
+      Height = 21
+      Top = 58
+      Width = 53
+      Caption = 'Sector:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label20: TLabel
+      Left = 6
+      Height = 21
+      Top = 125
+      Width = 37
+      Caption = 'Link:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label21: TLabel
+      Left = 6
+      Height = 21
+      Top = 157
+      Width = 58
+      Caption = 'Market:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object lbl_Sector: TLabel
+      Left = 97
+      Height = 20
+      Top = 59
+      Width = 115
+      AutoSize = False
+      Caption = 'lbl_Sector'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial Narrow'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object lbl_Industry: TLabel
+      Left = 96
+      Height = 20
+      Top = 94
+      Width = 116
+      AutoSize = False
+      Caption = 'lbl_Industry'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial Narrow'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object lbl_Market: TDBText
+      Left = 96
+      Height = 20
+      Top = 158
+      Width = 112
+      AutoSize = False
+      DataField = 'MARKET'
+      DataSource = dm_Main.ds_Temp_Pos
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial Narrow'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Activ: TGroupBox
+    Left = 8
+    Height = 209
+    Top = 0
+    Width = 383
+    Caption = 'Cautare:'
+    ClientHeight = 191
+    ClientWidth = 379
+    Font.Color = clWhite
+    Font.Height = -27
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    object Label15: TLabel
+      Left = 54
+      Height = 21
+      Top = 152
+      Width = 105
+      Caption = 'Symbol piata:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label22: TLabel
+      Left = 53
+      Height = 21
+      Top = 120
+      Width = 106
+      Caption = 'Nume comp. :'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object ed_Name: TEdit
+      Left = 141
+      Height = 26
+      Top = 16
+      Width = 233
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      OnChange = ed_NameChange
+      ParentFont = False
+      TabOrder = 0
+    end
+    object ed_Symbol: TEdit
+      Left = 141
+      Height = 26
+      Top = 48
+      Width = 80
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      OnChange = ed_SymbolChange
+      ParentFont = False
+      TabOrder = 1
+    end
+    object Label23: TLabel
+      Left = 6
+      Height = 21
+      Top = 96
+      Width = 144
+      Caption = 'Rezultatul cautarii:'
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Label14: TLabel
+    Left = 404
+    Height = 21
+    Top = 44
+    Width = 88
+    Caption = 'Pret Actual:'
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lbl_MarketPrice: TLabel
+    Left = 496
+    Height = 20
+    Top = 45
+    Width = 110
+    AutoSize = False
+    Caption = 'lbl_MarketPrice'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object dbEd_Symbol: TDBEdit
+    Left = 179
+    Height = 23
+    Top = 168
+    Width = 69
+    DataField = 'SYMBOL'
+    DataSource = dm_Main.ds_Temp_Pos
+    ReadOnly = True
+    CharCase = ecNormal
+    Color = 15921664
+    Enabled = False
+    MaxLength = 0
+    TabOrder = 0
+  end
+  object dbEd_Company_Name: TDBEdit
+    Left = 179
+    Height = 23
+    Top = 136
+    Width = 205
+    DataField = 'COMPANY_NAME'
+    DataSource = dm_Main.ds_Temp_Pos
+    ReadOnly = True
+    CharCase = ecNormal
+    Color = 15921664
+    Enabled = False
+    MaxLength = 0
+    TabOrder = 1
+    OnChange = dbEd_Company_NameChange
+  end
+  object Label17: TLabel
+    Left = 18
+    Height = 21
+    Top = 36
+    Width = 96
+    Caption = 'Dupa Nume:'
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 18
+    Height = 21
+    Top = 68
+    Width = 107
+    Caption = 'Dupa Symbol:'
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label19: TLabel
+    Left = 404
+    Height = 21
+    Top = 108
+    Width = 68
+    Caption = 'Industry:'
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lbl_Link: TLabel
+    Left = 496
+    Height = 20
+    Top = 140
+    Width = 110
+    AutoSize = False
+    Caption = 'lbl_Link'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 252
+    Height = 40
+    Top = 560
+    Width = 233
+    Caption = 'LANSEAZA!'
+    Default = True
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = BitBtn1Click
+    ParentFont = False
+    TabOrder = 5
+  end
+  object BitBtn2: TBitBtn
+    Left = 524
+    Height = 40
+    Top = 560
+    Width = 234
+    Cancel = True
+    Caption = 'Anuleaza'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    Kind = bkCancel
+    ModalResult = 2
+    ParentFont = False
+    TabOrder = 6
+  end
+  object lb_strategies: TListBox
+    Left = 632
+    Height = 172
+    Top = 36
+    Width = 356
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    Items.Strings = (
+      'Bla Bla Bla Bla Strategy'
+      'Bla Bla Bla Bla Bla Bla Bla Bla Strategy'
+      'Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Strategy'
+      'Bla Bla Bla Bla Bla Bla Bla Bla Bla Strategy'
+      'Bla Bla Bla Bla Bla Bla Bla Bla Strategy'
+      'Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Strategy'
+      'Bla Bla Bla Bla Strategy'
+      'Bla Bla Bla Bla Bla Bla Bla Bla Strategy'
+      'Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Strategy'
+      'Bla Bla Bla Bla Bla Bla Bla Bla Strategy'
+      'Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Strategy'
+      'Bla Bla Bla Bla Bla Bla Bla Bla Bla Strategy'
+      ''
+    )
+    ItemHeight = 19
+    OnClick = lb_strategiesClick
+    ParentFont = False
+    TabOrder = 7
+  end
+  object Label46: TLabel
+    Left = 632
+    Height = 19
+    Top = 15
+    Width = 183
+    Caption = 'Strategii tranzactionare:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object timer: TTimer
+    Enabled = False
+    Interval = 3000
+    OnTimer = timerTimer
+    left = 300
+    top = 168
+  end
+end

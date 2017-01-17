@@ -1,0 +1,529 @@
+object frm_History: Tfrm_History
+  Left = 111
+  Height = 665
+  Top = 15
+  Width = 1150
+  Caption = 'Istoric'
+  ClientHeight = 665
+  ClientWidth = 1150
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.2.4.0'
+  object dg_history: TDBGrid
+    Left = 1
+    Height = 240
+    Top = 40
+    Width = 1150
+    AutoEdit = False
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'ID'
+        Width = 30
+        FieldName = 'IDX'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'COD'
+        Width = 40
+        FieldName = 'NRPOS'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'SYM'
+        Width = 50
+        FieldName = 'SYMBOL'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'CONDITIE'
+        Width = 80
+        FieldName = 'STATE'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'ACTION'
+        Width = 160
+        FieldName = 'ACTION'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'PRET'
+        Width = 80
+        FieldName = 'PRICE'
+        DisplayFormat = '0.00'
+      end    
+      item
+        Title.Caption = 'MEDIE'
+        Width = 65
+        FieldName = 'AVERAGE_PRICE'
+        DisplayFormat = '0.00'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'ANTE'
+        Width = 70
+        FieldName = 'PREV_DIR'
+      end    
+      item
+        Title.Caption = 'CONT.'
+        FieldName = 'RE_OPEN'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'CURENT'
+        Width = 70
+        FieldName = 'CURR_DIR'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'DATA & ORA'
+        Width = 150
+        FieldName = 'DATETIME'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'P/L'
+        Width = 80
+        FieldName = 'PROFIT_LOSS'
+        DisplayFormat = '0'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'STAT.'
+        Width = 60
+        FieldName = 'STATUS'
+      end    
+      item
+        Title.Caption = 'PAIR'
+        Width = 125
+        FieldName = 'TEMP_ID'
+      end>
+    DataSource = dm_Main.ds_ClonedHistory
+    FixedCols = 0
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    Options = [dgTitles, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgDisableDelete, dgDisableInsert]
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Height = -15
+    TitleFont.Name = 'Arial'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    TitleFont.Style = [fsBold]
+    OnTitleClick = dg_historyTitleClick
+  end
+  object BitBtn1: TBitBtn
+    Left = 713
+    Height = 41
+    Top = 616
+    Width = 424
+    Caption = 'Inchide'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    Kind = bkClose
+    ModalResult = 11
+    ParentFont = False
+    TabOrder = 1
+  end
+  object mem_Export: TMemo
+    Left = 592
+    Height = 26
+    Top = 616
+    Width = 96
+    Lines.Strings = (
+      'mem_Export'
+    )
+    TabOrder = 3
+    Visible = False
+  end
+  object StaticText1: TStaticText
+    Left = 8
+    Height = 23
+    Top = 8
+    Width = 1136
+    Alignment = taCenter
+    Caption = 'Dati <click> pe coloane pentru a sorta istoricul dupa cum doriti.'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clNavy
+    Font.Height = -16
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+  end
+  object dg_Prices: TDBGrid
+    Left = 752
+    Height = 232
+    Top = 320
+    Width = 390
+    AutoEdit = False
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'ID'
+        Width = 20
+        FieldName = 'ID'
+      end    
+      item
+        Title.Caption = 'M TIME'
+        Width = 120
+        FieldName = 'MARKET_TIME'
+      end    
+      item
+        Title.Caption = 'SYM'
+        Width = 35
+        FieldName = 'SYMBOL'
+      end    
+      item
+        Title.Caption = 'VAL'
+        Width = 50
+        FieldName = 'VALUE'
+        DisplayFormat = '0.00'
+      end    
+      item
+        Title.Caption = 'ACT'
+        Width = 40
+        FieldName = 'ACTION'
+      end    
+      item
+        Title.Caption = 'NR'
+        Width = 30
+        FieldName = 'NRPOS'
+      end    
+      item
+        Title.Caption = 'AVG'
+        Width = 60
+        FieldName = 'AVERAGE_PRICE'
+      end>
+    DataSource = dm_Main.ds_ClonedPrices
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgDisableDelete, dgDisableInsert]
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 5
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Height = -12
+    TitleFont.Name = 'Arial'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    TitleFont.Style = [fsBold]
+    OnTitleClick = dg_historyTitleClick
+  end
+  object BitBtn2: TBitBtn
+    Left = 8
+    Height = 30
+    Top = 3
+    Width = 296
+    Caption = 'EXPORT ALGORITM'
+    Font.Style = [fsBold]
+    Kind = bkRetry
+    OnClick = BitBtn2Click
+    ParentFont = False
+    TabOrder = 2
+  end
+  object PriceChart: TChart
+    Left = 1
+    Height = 320
+    Top = 288
+    Width = 744
+    AxisList = <    
+      item
+        Marks.AtDataOnly = True
+        Minors = <>
+        Title.LabelFont.CharSet = ANSI_CHARSET
+        Title.LabelFont.Height = -13
+        Title.LabelFont.Name = 'Arial'
+        Title.LabelFont.Orientation = 900
+        Title.LabelFont.Pitch = fpVariable
+        Title.LabelFont.Quality = fqDraft
+        Title.LabelFont.Style = [fsBold]
+        Title.Visible = True
+        Title.Caption = 'PRETURI'
+      end    
+      item
+        Intervals.Options = [aipGraphCoords, aipUseCount, aipUseMaxLength, aipUseMinLength, aipUseNiceSteps]
+        Alignment = calBottom
+        Marks.Alignment = taCenter
+        Marks.AtDataOnly = True
+        Marks.Format = '%2:s'
+        Marks.Frame.Style = psSolid
+        Marks.OverlapPolicy = opHideNeighbour
+        Marks.Style = smsLabel
+        Minors = <>
+        Title.LabelFont.CharSet = ANSI_CHARSET
+        Title.LabelFont.Height = -13
+        Title.LabelFont.Name = 'Arial'
+        Title.LabelFont.Pitch = fpVariable
+        Title.LabelFont.Quality = fqDraft
+        Title.LabelFont.Style = [fsBold]
+        Title.Visible = True
+        Title.Caption = 'DATA / ORA DIN PIATA'
+        OnMarkToText = PriceChartAxisList1MarkToText
+      end>
+    BackColor = clWhite
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    ParentColor = False
+    object ChartSeries: TLineSeries
+      Marks.Format = '%2:s'
+      Marks.Style = smsLabel
+    end
+    object SMA_AvgSeries: TLineSeries
+      LinePen.Color = clRed
+    end
+    object EMA_AvgSeries: TLineSeries
+      LinePen.Color = clGreen
+    end
+  end
+  object BitBtn3: TBitBtn
+    Left = 784
+    Height = 24
+    Top = 288
+    Width = 358
+    Caption = 'EXPORT PRETURI'
+    Font.Style = [fsBold]
+    Kind = bkRetry
+    OnClick = BitBtn3Click
+    ParentFont = False
+    TabOrder = 7
+  end
+  object BitBtn4: TBitBtn
+    Left = 936
+    Height = 25
+    Top = 560
+    Width = 150
+    Caption = 'PRINT GRAFIC'
+    Font.Style = [fsBold]
+    Glyph.Data = {
+      36040000424D3604000000000000360000002800000010000000100000000100
+      2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+      FF00FFFFFF00C89662FDCA9865FFCA9765FFCA9765FFCA9765FFCA9764FFC997
+      64FFC99764FFCA9865FFC89562FDFFFFFF00FFFFFF00FFFFFF00A1A1A1C27A7A
+      7ADA585858FFC79561FFF9F7F6FFF9F1ECFFF9F1EBFFF8F0E9FFF7EDE6FFF4EA
+      E1FFF2E8DEFFFAF8F6FFC79461FF242424FF4B4B4BD9969696BF6B6B6BFDA7A7
+      A7FFB5B5B5FF818181FFAFACAAFFC5C0BDFFC5C0BDFFC5C0BDFFC5C0BDFFC5C0
+      BDFFC5C0BDFFADAAA8FF2C2C2CFFB5B5B5FF9B9B9BFF232323FF707070FFB5B5
+      B5FFB5B5B5FF959595FF818181FF818181FF797979FF6E6E6EFF616161FF5252
+      52FF434343FF424242FF6E6E6EFFB5B5B5FFB5B5B5FF252525FF757575FFBBBB
+      BBFFBBBBBBFF8D8D8DFFD4D4D4FFB9B9B9FFB9B9B9FFB9B9B9FFB9B9B9FFB9B9
+      B9FFB9B9B9FFD3D3D3FF838383FFBBBBBBFFBBBBBBFF2A2A2AFF7A7A7AFFD7D7
+      D7FFD7D7D7FF979797FFD8D8D8FFBFBFBFFFBFBFBFFFBFBFBFFFBFBFBFFFBFBF
+      BFFFBFBFBFFFD7D7D7FF8E8E8EFFD7D7D7FFD7D7D7FF3F3F3FFF7E7E7EFFF9F9
+      F9FFF9F9F9FFABABABFFDFDFDFFFCBCBCBFFCBCBCBFFCBCBCBFFCBCBCBFFCBCB
+      CBFFCBCBCBFFDFDFDFFFA3A3A3FFF9F9F9FFF9F9F9FF616161FF848484F9FCFC
+      FCFFFCFCFCFFCBCBCBFFF2F2F2FFF2F2F2FFF2F2F2FFF2F2F2FFF2F2F2FFF2F2
+      F2FFF2F2F2FFF2F2F2FFC6C6C6FFFCFCFCFFFCFCFCFF717171FE979797DAD2D2
+      D2FFE8E8E8FF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D
+      7DFF7D7D7DFF7D7D7DFF7D7D7DFFE8E8E8FFC4C4C4FF6D6D6DE1DDDDDDCD9A9A
+      9AFFCCCCCCFFC78B4EFFF9F4EDFFFEE8D8FFFEE8D7FFFDE5D3FFFCE4D1FFFAE0
+      C7FFF9DDC3FFFAF4EDFFC7854AFFC3C3C3FF747474FFCDCDCDCDFFFFFF00CECE
+      CEC2878787F4C5894CFFF9F4EFFFFEE7D7FFFDE7D5FFFCE6D2FFFBE1CCFFF8DC
+      C2FFF6DABDFFFAF4EFFFC48348FF616161F4BCBCBCC2FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00C68C4FF9F9F4F0FFFCE6D3FFFDE7D3FFFBE3CDFFFAE0C8FFF5D6
+      BBFFF3D4B5FFF8F4F0FFC4854AF9FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00C88D51F7F9F5F1FFFCE3CFFFFCE4CFFFFAE1CAFFF9DDC4FFF4E9
+      DFFFF7F2ECFFF5EFE9FFC38048FBFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00C88D52F6F9F5F1FFFCE3CDFFFBE3CDFFF9E0C8FFF8DCC2FFFDFB
+      F8FFFCE6CDFFE2B684FFD5A884C5FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00C5884DFAF7F2ECFFF8F4EEFFF8F3EDFFF8F3EDFFF8F2ECFFF2E6
+      D7FFE2B27DFFDB9569F6FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00E8CEB9C3D7AA7CCDC88C50FEC88C4FFFCA9155F7CB9055F7C589
+      4DFEDDAF8DC1FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+    }
+    OnClick = BitBtn4Click
+    ParentFont = False
+    TabOrder = 8
+  end
+  object BitBtn5: TBitBtn
+    Left = 784
+    Height = 25
+    Top = 560
+    Width = 150
+    Caption = 'SALVEAZA GRAFIC'
+    Font.Style = [fsBold]
+    Glyph.Data = {
+      36040000424D3604000000000000360000002800000010000000100000000100
+      2000000000000004000064000000640000000000000000000000D9AC8FFFCE95
+      70FFBD7343FFB76835FFB56835FFB46734FFB26634FFB06533FFAE6433FFAC63
+      32FFAA6232FFA96132FFAE6433FFAE6433FFAE6433FFBD8661FFC37E50FFEBC6
+      ADFFEAC5ADFFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+      F8FFFEFBF8FFFEFBF8FFFEFBF8FF98E1EEFF40B9D0FFCEECF3FFBB6C38FFEDCA
+      B3FFE0A27AFFFEFAF7FF62C088FF62C088FF62C088FF62C088FFCEECF3FF62C0
+      88FF62C088FF62C088FFFDF9F6FFCEECF3FF40B9D0FF67C5D6FFBB6C38FFEECC
+      B6FFE1A27AFFFEFAF7FFBFDCC2FFBFDCC2FFBFDCC2FFCEECF3FF0092B0FFCEEC
+      F3FFBFDCC2FFBFDCC2FFCEECF3FF02A7C4FF40B9D0FF40B9D0FFBB6B38FFEFCE
+      B8FFE1A279FFFEFAF7FF62C088FF62C088FFCEECF3FF0092B0FF0092B0FFCEEC
+      F3FF62C088FF62C088FFCEECF3FF02A7C4FF78E5F1FF02A7C4FFBA6A36FFEFD0
+      BBFFE2A27AFFFEFBF8FFFEFBF8FFCEECF3FF0092B0FF84F6FCFF0092B0FFCEEC
+      F3FFCEECF3FFCEECF3FF40B9D0FF3ED3E7FF57E2F1FF02A7C4FFBB6A36FFF0D2
+      BEFFE2A37AFFE2A37AFFCEECF3FF0092B0FF3CDAECFF4ADCECFF0092B0FF0092
+      B0FF269DB7FF39ABC4FF05D3EBFF07C2D8FF4DD6E7FF02A7C4FFBB6A36FFF2D5
+      C2FFE3A37AFFCEECF3FF0092B0FF55E8FAFF31E3F7FF13CCE2FF0CC4D9FF12C7
+      DCFF26D6EAFF24D5EBFF06C9E1FF43DCEDFF3BC0D5FF02A7C4FFBB6A36FFF2D8
+      C5FFCEECF3FF0092B0FF76DFEEFF48E9FBFF24DDF4FF38E2F6FF29DDF3FF20D8
+      EFFF10CCE3FF20D2E7FF3EDFF1FF32CCE2FF40B9D0FFCEECF3FFBB6B36FFF4D9
+      C7FFE6A67DFFCEECF3FF0092B0FF6FDBECFF50EBFCFF16D8F2FF4BE8F9FF57EA
+      FAFF44E0F2FF60E4F4FF47C8DDFF40B9D0FFCEECF3FFB36634FFBC6C37FFF4DC
+      C9FFE7A77DFFF9ECE1FFCEECF3FF0092B0FF71DAEAFF42F0FDFF0092B0FF0092
+      B0FF269DB7FF39ABC4FF40B9D0FFCEECF3FFE4BEA4FFB46734FFBE6E3AFFF5DD
+      CCFFE7A87EFFFAF0E8FFFAF0E8FFCEECF3FF0092B0FF74E2EFFF0092B0FFCEEC
+      F3FFCEECF3FFCEECF3FFCEECF3FFE0A278FFE7C2A9FFB66835FFC07442FFF6DF
+      D0FFE8A87EFFFCF6F1FFFCF6F1FFC88C64FFCEECF3FF0092B0FF0092B0FFCEEC
+      F3FFFAF0E8FFF8E8DDFFF7E6DBFFE1A37AFFEFD5C3FFB86A36FFC78255FFF6DF
+      D1FFE9AA80FFFEFAF6FFFDFAF6FFC88C64FFFBF3EEFFCEECF3FF0092B0FFCEEC
+      F3FFFCF6F1FFF9ECE2FFF8E7DBFFEED0BAFFECD0BDFFBD7444FFD7A685FFF6E0
+      D1FFF7E0D1FFFEFBF8FFFEFBF7FFFDF9F6FFFCF5F0FFFAF0EAFFCEECF3FFFDF9
+      F6FFFDFAF7FFFBF1EBFFF9EAE0FFEDD1BFFFCE926AFFE3C5B1FFE2BEA6FFDAAC
+      8EFFCA895FFFC17544FFBE6E3AFFBC6C37FFBB6B36FFBB6A36FFBB6A36FFBC6C
+      39FFBD6E3BFFBB6D3AFFC07545FFC98E66FFE7CEBDFFFFFFFF00
+    }
+    OnClick = BitBtn5Click
+    ParentFont = False
+    TabOrder = 9
+  end
+  object CheckBox1: TCheckBox
+    Left = 1024
+    Height = 19
+    Top = 8
+    Width = 113
+    Caption = 'Real Time Update'
+    Checked = True
+    OnChange = CheckBox1Change
+    State = cbChecked
+    TabOrder = 10
+  end
+  object Label1: TLabel
+    Left = 112
+    Height = 20
+    Top = 608
+    Width = 68
+    Caption = 'Negru: Pret'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 200
+    Height = 20
+    Top = 608
+    Width = 87
+    Caption = 'Albastru: EMA'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGreen
+    Font.Height = -15
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 309
+    Height = 20
+    Top = 608
+    Width = 67
+    Caption = 'Rosu: SMA'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clRed
+    Font.Height = -15
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 24
+    Height = 20
+    Top = 608
+    Width = 67
+    Caption = 'LEGENDA:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 24
+    Height = 20
+    Top = 637
+    Width = 110
+    Caption = 'OPTIUNI GRAFIC:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object cb_GraphType: TComboBox
+    Left = 136
+    Height = 28
+    Top = 634
+    Width = 288
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Grafic cu preturi de BUY/SELL si ore'
+      'Grafic doar BUY/SELL simplu'
+      'Grafic doar cu medii mobile'
+    )
+    OnChange = cb_GraphTypeChange
+    ParentFont = False
+    Style = csDropDownList
+    TabOrder = 11
+    Text = 'Grafic cu preturi de BUY/SELL si ore'
+  end
+  object PrintDialog1: TPrintDialog
+    left = 1104
+    top = 560
+  end
+  object Timer1: TTimer
+    Interval = 4000
+    OnTimer = Timer1Timer
+    left = 992
+    top = 584
+  end
+end

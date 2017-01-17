@@ -1,0 +1,9 @@
+2104 Market data farm connection is OK:usfarm.us
+2104 Market data farm connection is OK:usfarm
+2106 HMDS data farm connection is OK:ushmds
+2108 Market data farm connection is inactive but should be available upon demand.usfarm.us
+2108 Market data farm connection is inactive but should be available upon demand.usfarm.us
+2104 Market data farm connection is OK:usfarm.us
+2104 Market data farm connection is OK:usfarm.us
+2108 Market data farm connection is inactive but should be available upon demand.usfarm.us
+2108 Market data farm connection is inactive but should be available upon demand.usfarm.us
